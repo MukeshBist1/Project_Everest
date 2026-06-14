@@ -2,10 +2,10 @@
     margin: 0;padding: 0;box-sizing: border-box;
 }
 header{
-    padding: 20px 0; font-family: 'DM Sans' , system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'DM Sans' , system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 header #header_top{
-    padding: 0 3.5%; display: flex;align-items: center;justify-content: space-between;
+    padding: 20px 3.5%;display: flex;align-items: center;justify-content: space-between;
 }
 header #header_top .utility{
     display: flex; gap: 1.8rem;
@@ -36,6 +36,95 @@ header #header_top .menubar{
 }
 
 
+
+
+header nav{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    position: relative;
+    background-color: rgb(31, 31, 31);
+}
+header nav .outer_ul{
+    display: flex;gap: 1rem;padding: 0 1rem;
+}
+header nav .outer_ul li{
+    list-style-type: none;line-height: 42px;
+}
+header nav .outer_ul .nav_link{
+    position: relative;
+}
+header nav .outer_ul .nav_link:hover >a{
+    color: rgb(83, 190, 233);
+}
+header nav .outer_ul li a{
+    text-decoration: none;display: flex;align-items: center;gap: 0 4px;font-weight: 500; color: white;
+}
+header nav .hover_menu{
+    display: none;position: absolute;
+}
+header nav ul li .mini_hover{
+    position: absolute;left: 0;
+}
+header nav ul li .mini_hover li a{
+    line-height: 20px; padding: 5px 3px; font-size: 14px;color: black;
+}
+.travel_link:hover> .travel_hover{
+    display: block;column-count: 2;width: 400px;
+}
+.company_link:hover> .company_hover{
+    display: block;width: 280px;
+}
+.top5treks_link:hover> .top5treks_hover{
+    display: block;width: 280px;
+}
+header nav ul .mega_menu{
+    position: absolute; left: 4%;width: 90%;height: 480px; padding: 1rem; color: black;
+}   
+header nav ul .mega_menu .sidebar{
+    width: 23%; border-right: 1px solid rgba(128, 128, 128, 0.76);
+}
+header nav ul .mega_menu .sidebar ul li a{
+    color: black;
+}
+header nav ul .mega_menu .sidebar ul li{
+    margin: 2px 0;padding: 0 0.7rem; 
+}
+header nav ul .mega_menu .sidebar ul li:hover{
+background-color: rgb(228, 228, 228);border-right: 3px solid rgb(129, 129, 255);
+}
+header nav ul .mega_menu .contents{
+    width: 77%;padding: 0 1rem;
+}
+header nav ul .mega_menu .contents .trips_grid{
+    height: 90%; width: 100%;outline: 1px solid red;
+}
+header nav ul .mega_menu .contents .clt_button_wrapper button{
+    padding: 10px 14px; font-size: 14px; background-color: rgb(122, 122, 255); color: white;border: none; font-weight: 600;
+    border-radius: 4px;
+}
+header nav ul .Nepal_Trips_link:hover >.mega_menu{
+   display: flex;
+}
+header nav #blue-link{
+    color: rgb(150, 212, 236);
+}
+header nav #blue-link:hover{
+    color: rgb(83, 190, 233);
+}
+header nav #blue-link img{
+    filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(203deg) brightness(119%) contrast(119%);
+}
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:1024px){
     header #header_top .utility .utility_right .person_image{
         display: none;
@@ -52,8 +141,7 @@ header #header_top .menubar{
         width: 9rem;
     }
     header #header_top .menubar{
-        display: flex;
-        gap: 0.7rem;
+        display: flex;gap: 0.7rem;
     }
     header #header_top .menubar img{
         width:30px;
