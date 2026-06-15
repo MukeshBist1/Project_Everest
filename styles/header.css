@@ -147,6 +147,9 @@ nav .trips_grid .grid{
  nav #blue_links img{
     filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(203deg) brightness(119%) contrast(119%);
 }
+nav .search_btn_nav{
+    position: absolute; filter: brightness(0) invert(1);width: 25px; height: 25px;right: 5%;top: 20%;cursor: pointer;
+}
 
 
 
