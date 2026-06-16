@@ -151,13 +151,57 @@ nav .trips_grid .grid{
     filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(203deg) brightness(119%) contrast(119%);
 }
 nav .search_btn_nav{
-    position: absolute; filter: brightness(0) invert(1);width: 25px; height: 25px;right: 3%;top: 20%;cursor: pointer;
+    position: absolute; 
+    filter: brightness(0) invert(1);
+    width: 25px; 
+    height: 25px;
+    right: 3%;top: 20%;
+    cursor: pointer;
 }
 header .mobile_nav{
         display: none;
     }
 
 
+/* search screen here */
+header .search_screen{
+    width:100%;
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.search_screen .search_box{
+    height: fit-content;
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 12px 10px;
+}
+.search_screen .search_box .search_icon{
+    height: 25px;
+    width: 25px;
+    filter: opacity(0.7);
+}
+.search_screen .search_cover{
+    background-color: rgba(0, 0, 0, 0.678);
+    width: 100%;
+}
+.search_screen .search_box input{
+    padding: 1rem 1rem;
+    font-size: 30px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+.search_screen .search_box input::placeholder{
+    font-size: 30px;color: rgb(214, 214, 214);
+}
 
 
 
@@ -166,6 +210,11 @@ header .mobile_nav{
 
 
 
+
+
+
+
+/* responsive design here */
 
 @media screen and (max-width:1024px){
     header #header_top .utility .utility_right .person_image{
@@ -212,4 +261,36 @@ header .mobile_nav{
     header .mobile_nav{
         display: none;
     }
+    .search_screen .search_box{
+    width: 90%;
+}
+.search_screen .search_box{
+    padding: 0px 0px;
+}
+.search_screen .search_box{
+    height: fit-content;
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    padding: 5px 0.8rem;
+}
+.search_screen .search_box input{
+    font-size: 20px;
+}
+.search_screen .search_box input::placeholder{
+    font-size: 20px;
+}
+}
+@media screen and (max-width:480px){
+    .search_screen .search_box{
+    width: 90%;
+}
+}
+@media screen and (max-width:320px){
+    .search_screen .search_box{
+    width: auto;
+}
+.search_screen .search_box input{
+    flex:1;
+}
 }

@@ -13,3 +13,24 @@ sidebar_items.forEach((item,index)=>{
     })
 })
 console.log(sidebar_items[0])
+
+
+// search screen here
+
+const search_box=document.querySelector(".search_screen .search_box");
+const search_cover=document.querySelector(".search_screen .search_cover")
+const search_start=document.querySelectorAll("header .search_start")
+const search_screen=document.querySelector("header .search_screen")
+const cross_icon=document.querySelector("header .search_screen .cross_icon")
+
+const search_box_height=search_box.clientHeight;
+search_cover.style.height=`calc(100vh - ${search_box_height}px)`;
+
+search_start.forEach((sicon)=>{
+    sicon.addEventListener("click",()=>{
+        search_screen.style.display="flex";
+    })
+})
+cross_icon.addEventListener("click",()=>{
+    search_screen.style.display="none";
+})

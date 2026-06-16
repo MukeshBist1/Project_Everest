@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="menubar">
-                <img src="../images/search.png" alt="">
+                <img class="search_start" src="../images/search.png" alt="">
                 <img src="../images/envelope.png" alt="">
                 <img src="../images/whatsapp.png" alt="">
                 <img src="../images/bar.png" alt="">
@@ -251,11 +251,11 @@
                     </div>
                 </li>
             </ul>
-            <img class="search_btn_nav" src="../images/search.png" alt="">
+            <img class="search_btn_nav search_start" src="../images/search.png" alt="">
         </nav>
         <!-- mobile screen navigation here -->
         <div class="mobile_nav">
-            <svg class="search" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+            <svg class="search search_start" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
                 <g fill="#8eb4c2" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none"
                     style="mix-blend-mode: normal">
                     <g transform="scale(8.53333,8.53333)">
@@ -265,7 +265,7 @@
                     </g>
                 </g>
             </svg>
-            <span>Search Your Trip</span>
+            <span class="search_start">Search Your Trip</span>
             <button>
                 <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
                     <g fill="#fbfbfb" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none"
@@ -282,7 +282,12 @@
         </div>
         <!-- search screen here -->
         <div class="search_screen">
-            
+            <div class="search_box">
+                <img class="search_icon search_start" src="../images/search.png" alt="">
+                <input type="text" name="search_key" placeholder="Search">
+                <img class="cross_icon" src="../images/cross.png" alt="">
+            </div>
+            <div class="search_cover"></div>
         </div>
     </header>
     <script src="../javascripts/header.js"></script>
