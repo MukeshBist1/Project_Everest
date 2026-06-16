@@ -42,10 +42,10 @@ header nav{
     display: flex;
     justify-content: center;
     position: relative;
-    background-color: rgb(31, 31, 31);
+    background-color: rgb(31, 31, 31);padding: 0 5px;
 }
 nav .outer_ul{
-    display: flex;gap: 0.3rem;padding: 0 1rem;align-items: center;
+    display: flex;gap: 0.3rem;padding: 0 0.8rem;align-items: center;
 }
 nav .outer_ul .parent_li{
     list-style-type: none;
@@ -53,8 +53,11 @@ nav .outer_ul .parent_li{
 nav .outer_ul .parent_li img{
     transform: translateY(2px);
 }
+nav .outer_ul:nth-child(2){
+    border-left: 1px solid;border-right: 1px solid;border-image: linear-gradient(to bottom , white , black)1;
+}
 nav .parent_link{
-    list-style-type: none;line-height: 42px;font-size: 16px;padding: 0 1rem;
+    list-style-type: none;line-height: 45px;font-size: 16px;padding: 0 0.5rem;
 }
 nav .nav_link{
     position: relative;
@@ -148,8 +151,12 @@ nav .trips_grid .grid{
     filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(203deg) brightness(119%) contrast(119%);
 }
 nav .search_btn_nav{
-    position: absolute; filter: brightness(0) invert(1);width: 25px; height: 25px;right: 5%;top: 20%;cursor: pointer;
+    position: absolute; filter: brightness(0) invert(1);width: 25px; height: 25px;right: 3%;top: 20%;cursor: pointer;
 }
+header .mobile_nav{
+        display: none;
+    }
+
 
 
 
@@ -164,13 +171,34 @@ nav .search_btn_nav{
     header #header_top .utility .utility_right .person_image{
         display: none;
     }
+    header nav{
+        display: none;
+    }
+    header .mobile_nav{
+        display: flex;align-items: center;background-color: #111827;gap: 8px;padding-left: 1.5rem;
+    }
+    header .mobile_nav .search{
+        width: 25px;height: 25px;
+    }
+    header .mobile_nav .hamburger{
+        width: 22px;height: 22px;
+    }
+    header .mobile_nav button{
+        display: flex;align-items: center;gap: 5px;background-color: #374151;padding: 3px 0.5rem;
+    }
+    header .mobile_nav button p{
+        font-size: 18px;padding: 0.5rem 1rem;color: white;
+    }
+    header .mobile_nav span{
+        flex: 1;font-size: 18px;font-weight: 500;color: rgb(69, 69, 83);
+    }
 }
 @media screen and (max-width:768px){
     header #header_top .utility{
         display: none;
     }
     header #header_top{
-    padding: 0 3%;;
+    padding: 1rem 3%;
     }
     header #header_top .logo{
         width: 9rem;
@@ -180,5 +208,8 @@ nav .search_btn_nav{
     }
     header #header_top .menubar img{
         width:30px;
+    }
+    header .mobile_nav{
+        display: none;
     }
 }

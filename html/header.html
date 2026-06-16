@@ -12,8 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body style="background-color: rgb(175, 175, 175);">
+<body>
     <header>
+        <!-- header top logo part here  -->
         <div id="header_top">
             <img class="logo" src="../images/logo.svg" alt="">
             <div class="utility">
@@ -38,11 +39,11 @@
                 <img src="../images/bar.png" alt="">
             </div>
         </div>
-        <!-- nav started -->
+        <!--large screen nav here -->
         <nav>
             <ul class="outer_ul">
                 <li class="Nepal_Trips_link parent_li">
-                    <a id="blue_links" class="parent_link" href="#">Nepal Trips<img src="../images/down_arrow.png" alt=""></a>
+                    <a id="blue_links" class="parent_link" href="#">Nepal Trips&nbsp;<img src="../images/down_arrow.png" alt=""></a>
                     <div class="mega_menu hover_menu">
                         <aside class="sidebar">
                             <ul>
@@ -238,7 +239,7 @@
             </ul>
             <ul class="outer_ul">
                 <li class="nav_link top5treks_link parent_li">
-                    <a id="blue_links" class="parent_link" href="#"><img src="../images/star.png" alt="">Top 5 Treks</a>
+                    <a id="blue_links" class="parent_link" href="#"><img src="../images/star.png" alt="">&nbsp;Top 5 Treks</a>
                     <div class="hover_menu mini_hover top5treks_hover">
                         <ul>
                             <li><a href="#">Everest Base Camp Trek – 14 Days</a></li>
@@ -252,6 +253,37 @@
             </ul>
             <img class="search_btn_nav" src="../images/search.png" alt="">
         </nav>
+        <!-- mobile screen navigation here -->
+        <div class="mobile_nav">
+            <svg class="search" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+                <g fill="#8eb4c2" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                    style="mix-blend-mode: normal">
+                    <g transform="scale(8.53333,8.53333)">
+                        <path
+                            d="M13,3c-5.511,0 -10,4.489 -10,10c0,5.511 4.489,10 10,10c2.39651,0 4.59738,-0.85101 6.32227,-2.26367l5.9707,5.9707c0.25082,0.26124 0.62327,0.36648 0.97371,0.27512c0.35044,-0.09136 0.62411,-0.36503 0.71547,-0.71547c0.09136,-0.35044 -0.01388,-0.72289 -0.27512,-0.97371l-5.9707,-5.9707c1.41266,-1.72488 2.26367,-3.92576 2.26367,-6.32227c0,-5.511 -4.489,-10 -10,-10zM13,5c4.43012,0 8,3.56988 8,8c0,4.43012 -3.56988,8 -8,8c-4.43012,0 -8,-3.56988 -8,-8c0,-4.43012 3.56988,-8 8,-8z">
+                        </path>
+                    </g>
+                </g>
+            </svg>
+            <span>Search Your Trip</span>
+            <button>
+                <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+                    <g fill="#fbfbfb" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                        style="mix-blend-mode: normal">
+                        <g transform="scale(10.66667,10.66667)">
+                            <path d="M20,14h-16c-1.105,0 -2,-0.895 -2,-2v0c0,-1.105 0.895,-2 2,-2h16c1.105,0 2,0.895 2,2v0c0,1.105 -0.895,2 -2,2z" opacity="0.35"></path>
+                            <path d="M20,7h-16c-1.105,0 -2,-0.895 -2,-2v0c0,-1.105 0.895,-2 2,-2h16c1.105,0 2,0.895 2,2v0c0,1.105 -0.895,2 -2,2z"></path>
+                            <path d="M20,21h-16c-1.105,0 -2,-0.895 -2,-2v0c0,-1.105 0.895,-2 2,-2h16c1.105,0 2,0.895 2,2v0c0,1.105 -0.895,2 -2,2z"></path>
+                        </g>
+                    </g>
+                </svg>
+                <p>Menu</p>
+            </button>
+        </div>
+        <!-- search screen here -->
+        <div class="search_screen">
+            
+        </div>
     </header>
     <script src="../javascripts/header.js"></script>
 </body>
