@@ -213,6 +213,7 @@ header .vertical_nav{
     flex-direction: column;
     padding: 3px 0;
     background-color: #374151;
+    overflow: hidden;
 }
 header .vertical_nav.active{
     display: flex;
@@ -261,6 +262,10 @@ header .vertical_nav ul li{
     align-items: center;
     justify-content: flex-end;
     color: whitesmoke;
+}
+header .vertical_nav ul li span{
+    display: flex;
+    align-items: center;
 }
 header .vertical_nav ul li a{
     color: white;
@@ -348,6 +353,12 @@ header .vertical_nav{
 }
 .search_screen .search_box input::placeholder{
     font-size: 20px;
+}
+header .vertical_nav ul{
+    padding: 3px 10px;
+}
+header .vertical_nav ul li{
+    flex-direction: column;
 }
 }
 @media screen and (max-width:480px){
