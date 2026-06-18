@@ -34,3 +34,33 @@ search_start.forEach((sicon)=>{
 cross_icon.addEventListener("click",()=>{
     search_screen.style.display="none";
 })
+
+
+
+// vertical navigation here
+const clickThis=document.querySelectorAll("header .vertical_nav .click_this")
+const clickDown=document.querySelectorAll("header .vertical_nav .click_down")
+
+clickThis.forEach((each,index)=>{
+    each.addEventListener("click",()=>{
+        const isActive=clickDown[index].classList.contains("active");
+        clickDown.forEach((e)=>{
+            e.classList.remove("active")
+        })
+        if(!isActive){
+            clickDown[index].classList.add("active")
+            clickDown[index].style.height="auto"
+            clickDown[index].style.transition="0.3s ease"
+        }
+    })
+})
+
+const hamburger=document.querySelectorAll("header .Hbar");
+const verticalNav=document.querySelector("header .vertical_nav");
+
+hamburger.forEach((ham)=>{
+    ham.addEventListener("click", (e) => {
+        e.stopImmediatePropagation();   // prevent other clicks
+        verticalNav.classList.toggle("active");
+    });
+})

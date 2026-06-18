@@ -163,6 +163,8 @@ header .mobile_nav{
     }
 
 
+    
+
 /* search screen here */
 header .search_screen{
     width:100%;
@@ -202,6 +204,70 @@ header .search_screen{
 .search_screen .search_box input::placeholder{
     font-size: 30px;color: rgb(214, 214, 214);
 }
+
+
+
+/* vertical navigation here */
+header .vertical_nav{
+    display: none;
+    flex-direction: column;
+    padding: 3px 0;
+    background-color: #374151;
+}
+header .vertical_nav.active{
+    display: flex;
+}
+header .vertical_nav .root_links{
+    color: #d5eff9;
+    font-size: 18px;
+    text-decoration: none;
+}
+header .vertical_nav p{
+    background-color: #374151;
+    color: #d5eff9;
+    font-size: 18px;
+    padding: 12px 0px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.377);
+    margin: 0 24px;
+    cursor: pointer;
+}
+header .vertical_nav .click_down a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #d5eff9;
+    padding: 12px 0px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.377);
+    margin: 0 24px;
+}
+header .vertical_nav .click_down{
+    flex-direction: column;
+    background-color: #1f2937;
+    display: none;
+    height: 0;
+}
+header .vertical_nav .click_down.active{
+    display: flex;
+}
+header .vertical_nav ul{
+    padding: 20px 24px;
+    background-color: #374151;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+header .vertical_nav ul li{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: whitesmoke;
+}
+header .vertical_nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+
 
 
 
