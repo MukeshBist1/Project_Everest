@@ -209,14 +209,12 @@ header .search_screen{
 
 /* vertical navigation here */
 header .vertical_nav{
-    display: none;
+    display: flex;
     flex-direction: column;
-    padding: 3px 0;
     background-color: #374151;
     overflow: hidden;
-}
-header .vertical_nav.active{
-    display: flex;
+    height: 0;
+    transition: height 0.3s ease;
 }
 header .vertical_nav .root_links{
     color: #d5eff9;
@@ -244,11 +242,10 @@ header .vertical_nav .click_down a{
 header .vertical_nav .click_down{
     flex-direction: column;
     background-color: #1f2937;
-    display: none;
-    height: 0;
-}
-header .vertical_nav .click_down.active{
     display: flex;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
 }
 header .vertical_nav ul{
     padding: 20px 24px;
@@ -270,9 +267,6 @@ header .vertical_nav ul li span{
 header .vertical_nav ul li a{
     color: white;
     text-decoration: none;
-}
-header .vertical_nav{
-    display: none;
 }
 
 
@@ -308,6 +302,12 @@ header .vertical_nav{
     }
     header .mobile_nav button{
         display: flex;align-items: center;gap: 5px;background-color: #374151;padding: 3px 0.5rem;
+    }
+    header .mobile_nav button .inner{
+        display: flex;align-items: center;
+    }
+    header .mobile_nav button .close{
+        display: none;
     }
     header .mobile_nav button p{
         font-size: 18px;padding: 0.5rem 1rem;color: white;
