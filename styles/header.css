@@ -141,13 +141,13 @@ nav .trips_grid .grid{
     padding: 10px 14px; font-size: 14px; background-color: rgb(122, 122, 255); color: white;border: none; font-weight: 600;
     border-radius: 4px;
 }
- nav #blue_links{
-    color: rgb(150, 212, 236); text-decoration: none;gap: 4px;
+ nav .blue_links{
+    color: rgb(150, 212, 236); text-decoration: none;gap: 4px;line-height: 45px;
 }
- nav #blue_links:hover{
+ nav .blue_links:hover{
     color: rgb(83, 190, 233);
 }
- nav #blue_links img{
+ nav .blue_links img{
     filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(203deg) brightness(119%) contrast(119%);
 }
 nav .search_btn_nav{
@@ -265,6 +265,9 @@ header .vertical_nav ul li{
 header .vertical_nav ul li a{
     color: white;
     text-decoration: none;
+}
+header .vertical_nav{
+    display: none;
 }
 
 
