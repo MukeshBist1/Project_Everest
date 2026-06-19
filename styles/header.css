@@ -330,7 +330,7 @@ header .vertical_nav ul li a{
         display: flex;gap: 0.7rem;
     }
     header #header_top .menubar img{
-        width:30px;
+        width:30px;height: 30px;
     }
     header .mobile_nav{
         display: none;

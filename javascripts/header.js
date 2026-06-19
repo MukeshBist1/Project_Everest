@@ -64,8 +64,8 @@ const close = document.querySelector("header .mobile_nav .close");
 hamburger.forEach((ham) => {
     ham.addEventListener("click", (e) => {
         e.stopImmediatePropagation();   // prevent other clicks
-        const isOpen = verticalNav.style.height !== "0px";
-        if (!isOpen) {
+        const isOpen = window.getComputedStyle(verticalNav).height == "0px";
+        if (isOpen) {
             verticalNav.style.height = "auto";
             close.style.display="flex"
             open.style.display="none"
