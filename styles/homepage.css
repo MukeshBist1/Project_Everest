@@ -14,7 +14,6 @@
 }
 .homepage_main .hero_video_container{
     height: 80vh;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,19 +89,39 @@
 .hero_video_container_trek_overlay{
     position: absolute;
     bottom: 0.3rem;
-    width: 13rem;
+    width: 16rem;
+}
+.everest_background_image{
+    display: none;
 }
 .hero_video_container_trek_overlay_beneath{
     position: absolute;
     bottom: 0;
-}
-.everest_background_image{
-    display: none;
+    width: 100%;
 }
 .mobile_trek_beneath{
     display: none;
 }
 
+
+
+
+
+/* feature trips here */
+.feature_trips{
+    width: 100%;
+    padding: 0 7.5%;
+    text-align: center;
+    background-color: white;
+}
+.feature_trips h2{
+    font-size: 40px;
+}
+.feature_trips p{
+    font-size: 14px;
+    color: #374151;
+}
+/* swiper here */
 
 
 
@@ -138,6 +157,9 @@
     justify-content: flex-end;
     gap: 10rem;
 }
+.swiper-button-prev ,.swiper-button-next{
+    display: none;
+}
 }
 @media screen and (max-width:768px){
  .hero_video_container_trek_overlay{
@@ -159,7 +181,7 @@
     background-color: white;
     position: absolute;
     bottom: -5%;
-    border-radius: 50%;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
     box-shadow: 0 0 5rem 5rem black;
     z-index: -1;
 }
@@ -180,5 +202,14 @@
 .hero_video_container_icons{
     height: 30px;
     width: 30px;
+}
+.hero_video_container_bottom_left li,.hero_video_container_bottom_right li{
+    white-space: wrap;
+}
+.feature_trips{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
 }
 }
