@@ -10,7 +10,7 @@
     --primary_color: #374151;
 }
 .homepage_main{
-    
+    margin-bottom: 4rem;
 }
 .homepage_main .hero_video_container{
     height: 80vh;
@@ -184,6 +184,82 @@
 
 
 
+/* feature_highlights here */
+.feature_highlights{
+    position: relative;
+}
+.feature_highlights_top{
+    display: flex;
+    padding: 6rem 6% 0 6%;
+    justify-content: space-between;
+    background-color: #B1DFFB;
+}
+.feature_highlights_top_left{
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.feature_highlights_top_right{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 55%;
+}
+.feature_highlights_top_left p{
+    line-height: 1.5;
+    font-size: 16px;
+    color: #374151;
+}
+.feature_highlights_top_left a{
+    text-decoration: none;
+    padding: 6px 15px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 255, 0.747);
+    border-radius: 3px;
+    font-weight: 600;
+    color: rgba(0, 0, 255, 0.671);
+    width: fit-content;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background-color: white;
+}
+.feature_highlights_top_left a img{
+    width: 30px;
+}
+.feature_highlights_top_left h2{
+    font-size: 40px;
+    line-height: 1.2;
+}
+.feature_highlights_right_grid_box{
+    height: fit-content;
+    display: flex;
+    gap: 0.5rem;
+}
+.feature_highlights_right_grid_box h3{
+    font-size: 18px;
+}
+.feature_highlights_right_grid_box p{
+    font-size: 14px;
+    text-align: left;
+}
+.feature_highlights_right_grid_icon{
+    height: 40px;
+    width: 40px;
+}
+.feature_highlights_png_bg{
+    aspect-ratio: 2880/1120;
+    background-color: #B1DFFB;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    position: absolute;
+    top: 85%;
+    z-index: -1;
+}
 
 
 
@@ -204,6 +280,11 @@
 
 
 /* responsive styles here */
+@media screen and (max-width:1145px){
+    .feature_highlights_top{
+    padding: 6rem 3% 0 3%;
+}
+}
 @media screen and (max-width:1024px){
     .everest_background_image{
     display: block;
@@ -247,6 +328,21 @@
 .feature_trips p{
     width:70%;
 }
+.feature_highlights_top{
+    flex-direction: column;
+    padding: 6rem 2.3% 0 2.3%;
+}
+.feature_highlights_top_left,.feature_highlights_top_right{
+    width: 100%;
+    margin: 0 auto;
+}
+.feature_highlights_png_bg{
+    top: 100%;
+}
+.feature_highlights_top_left a{
+    margin-top: 1.8rem;
+    margin-bottom: 3rem;
+}
 }
 @media screen and (max-width:768px){
  .hero_video_container_trek_overlay{
@@ -263,6 +359,21 @@
 }
 .feature_trips p{
     width:80%;
+}
+.feature_highlights_top{
+    padding: 3rem 2.3% 0 2.3%;
+}
+.feature_highlights_top h2{
+    font-size: 30px;
+}
+}
+@media screen and (max-width:640px){
+.feature_highlights_top_right{
+    display: flex;
+    flex-direction: column;
+}
+.feature_highlights_right_grid_box h3{
+    font-size: 14px;
 }
 }
 @media screen and (max-width:480px){
@@ -311,5 +422,8 @@
 }
 .swiper-slide img{
     aspect-ratio: 16/11;
+}
+.feature_highlights_top{
+    padding: 2rem 2.3% 0 2.3%;
 }
 }
