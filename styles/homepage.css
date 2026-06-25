@@ -342,6 +342,9 @@
 
 
 /* intro with card here */
+.intro_with_cards{
+    background-color: rgb(250, 250, 250);
+}
 .intro_with_cards_wrapper{
     width: 100%;
     margin: 0 auto;
@@ -384,6 +387,7 @@
 }
 .intro_with_cards_eachGrid:not(:first-child){
     box-shadow: 5px 5px 10px 1px rgb(197, 197, 197),-5px -1px 15px rgb(235, 235, 235);
+    background-color: rgb(255, 255, 252);
 }
 .intro_with_cards_eachGrid:nth-child(1){
     padding: 0;
