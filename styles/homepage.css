@@ -424,7 +424,7 @@
 .intro_with_cards_learnMoreBtn{
     margin: 0 auto;
 }
-.intro_with_cards_learnMoreBtn a{
+.intro_with_cards_learnMoreBtn a,.layers_content_button{
     color: rgb(2, 137, 209);
     text-decoration: none;
     font-size: 16px;
@@ -434,6 +434,7 @@
     border: 1px solid rgb(2, 137, 209);
     border-radius: 3px;
     padding: 10px 22px;
+    width: fit-content;
 }
 .intro_with_cards_learnMoreBtn a img{
     filter: invert(41%) sepia(85%) saturate(1478%) hue-rotate(185deg) brightness(90%) contrast(98%);
@@ -443,6 +444,49 @@
 
 
 
+
+
+
+/* Layers content here */
+.layers_content{
+    position: relative;
+    z-index: -2;
+    background-image: linear-gradient(to bottom,#e6fce8,#f4faff);
+}
+.layers_content_bgImage{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    min-width: 700px;
+}
+.layers_content_wrapper{
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    gap: 3rem;
+}
+.layers_content_left img{
+    width: 450px;
+}
+.layers_content_right{
+    margin-top: 3.5rem;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.layers_content_right h2{
+    font-size: 40px;
+}
+.layers_content_right p{
+    line-height: 1.5;
+    font-size: 16px;
+}
+.layers_content_button img{
+    margin-left: 0.5rem;
+}
 
 
 
@@ -467,6 +511,22 @@
         }
 }
 @media screen and (max-width:1024px){
+    .layers_content_left img{
+    width: 100%;
+}
+    .layers_content_button{
+        font-size: 14px;
+    }
+    .layers_content_right h2{
+    font-size: 30px;
+}
+    .layers_content_right{
+    margin-top: 0rem;
+}
+    .layers_content_wrapper{
+    width: 100%;
+    margin: 0 0;
+}
     .intro_with_cards_eachGrid{
     height: 150px;
 }
@@ -542,6 +602,10 @@
 }
 }
 @media screen and (max-width:768px){
+    .layers_content_wrapper{
+    flex-direction: column-reverse;
+
+}
     .intro_with_cards_eachGrid:nth-child(1){
     display: none;
 }
