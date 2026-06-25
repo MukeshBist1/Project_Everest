@@ -10,7 +10,7 @@
     --primary_color: #374151;
 }
 .homepage_main{
-
+    overflow: hidden;
 }
 .homepage_main .hero_video_container{
     height: 80vh;
@@ -107,6 +107,7 @@
 
 
 
+
 /* feature trips here */
 .feature_trips{
     width: 100%;
@@ -181,6 +182,10 @@
 .swiper_next_button{
     right: -3.5rem;
 }
+
+
+
+
 
 
 
@@ -262,6 +267,10 @@
 }
 
 
+
+
+
+
 /* happy trekker here */
 .happy_trekker{
     display: flex;
@@ -292,6 +301,10 @@
 }
 
 
+
+
+
+
 /* turst badges here */
 .trust_badges{
     display: flex;
@@ -299,6 +312,7 @@
     justify-content: center;
     gap: 1rem;
     padding: 2rem 0;
+    scrollbar-width: none;
 }
 .trust_badge_box{
     padding: 20px;
@@ -327,6 +341,111 @@
 
 
 
+/* intro with card here */
+.intro_with_cards_wrapper{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 80px 4rem;
+}
+.intro_with_cards_sljfd{
+    text-align: center;
+}
+.intro_with_cards_sljfd h3{
+    font-size: 40px;
+}
+.intro_with_cards_sljfd p{
+    font-size: 14px;
+    text-align: center;
+    color: var(--primary_color);
+    width: 70%;
+    margin: 0 auto;
+}
+.intro_with_cards_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+.intro_with_cards_eachGrid{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    aspect-ratio: 11/7;
+    height: 160px;
+    border-radius: 20px;
+}
+.intro_with_cards_eachGrid:not(:first-child){
+    box-shadow: 5px 5px 10px 1px rgb(197, 197, 197),-5px -1px 15px rgb(235, 235, 235);
+}
+.intro_with_cards_eachGrid:nth-child(1){
+    padding: 0;
+}
+.intro_with_cards_eachGrid h3{
+    font-size: 36px;
+    line-height: 1;
+    color: var(--primary_color);
+    width: 100%;
+}
+.intro_with_cards_eachGrid h3 span{
+    font-size: 24px;
+    color: gray;
+}
+.intro_with_cards_nirc{
+    align-content: center;
+}
+.intro_with_cards_eachGrid_top{
+    display: flex;
+    align-items: center;
+}
+.intro_with_cards_eachGrid_top img{
+    width: 3.5rem;
+    margin-right: 8px;
+}
+.intro_with_cards_eachGrid_top h4{
+    font-size: 18px;
+    color: var(--primary_color);
+}
+.intro_with_cards_eachGrid_bottom p{
+    font-size: 14px;
+    color: rgb(143, 143, 143);
+}
+.intro_with_cards_learnMoreBtn{
+    margin: 0 auto;
+}
+.intro_with_cards_learnMoreBtn a{
+    color: rgb(2, 137, 209);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(2, 137, 209);
+    border-radius: 3px;
+    padding: 10px 22px;
+}
+.intro_with_cards_learnMoreBtn a img{
+    filter: invert(41%) sepia(85%) saturate(1478%) hue-rotate(185deg) brightness(90%) contrast(98%);
+    width: 25px;
+    margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -340,10 +459,23 @@
 /* responsive styles here */
 @media screen and (max-width:1145px){
     .feature_highlights_top{
-    padding: 6rem 3% 0 3%;
-}
+        padding: 6rem 3% 0 3%;
+        }
 }
 @media screen and (max-width:1024px){
+    .intro_with_cards_eachGrid{
+    height: 150px;
+}
+    .intro_with_cards_sljfd p{
+    width: 90%;
+}
+    .intro_with_cards_wrapper{
+    padding: 50px 2rem;
+}
+    .intro_with_cards_sljfd h3{
+    font-size: 30px;
+    width: 100%;
+}
     .trust_badge_box{
     width: min(400px,30%);
 }
@@ -406,6 +538,27 @@
 }
 }
 @media screen and (max-width:768px){
+    .intro_with_cards_eachGrid:nth-child(1){
+    display: none;
+}
+    .intro_with_cards_wrapper{ 
+        align-items: flex-start;
+        padding: 1rem 1rem;
+    }
+    .intro_with_cards_gridScroll{
+        overflow: scroll;
+        width: 100%;
+        scrollbar-width: none;
+    }
+    .intro_with_cards_grid{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+}
+    .intro_with_cards_wrapper{
+    padding: 30px 1rem;
+}
     .happy_trekker h3{
     font-size: 20px;
 }
@@ -469,6 +622,9 @@
 }
 }
 @media screen and (max-width:640px){
+    .intro_with_cards_wrapper{
+    gap: 1rem;
+}
 .feature_highlights_top_right{
     display: flex;
     flex-direction: column;
@@ -481,6 +637,16 @@
 }
 }
 @media screen and (max-width:480px){
+    .intro_with_cards_learnMoreBtn a{
+    font-size: 14px;
+    padding: 5px 12px;
+}
+    .intro_with_cards_sljfd p{
+    width: 100%;
+}
+    .intro_with_cards_wrapper{
+    padding: 20px 0.5rem;
+}
 .homepage_main .hero_video_container button{
     width: 90%;
 }
