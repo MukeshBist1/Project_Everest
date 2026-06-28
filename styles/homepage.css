@@ -616,7 +616,7 @@
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
-    max-height: 240px;
+    max-height: 400px;
 }
 
 
@@ -688,6 +688,14 @@
     color: white;
     line-height: 1;
     padding-bottom: 5px;
+}
+.yt_video_swiper .video-loader{
+    display: none;
+    color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 

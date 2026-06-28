@@ -89,10 +89,17 @@ function stopAllVideos() {
 function loadSlide(activeSlide, autoplay = true) {
   const iframe = activeSlide.querySelector("iframe");
   if (iframe) {
+    document.querySelector(".yt_video_swiper .video-loader").style.display = "block"; // show loader
     const baseSrc = iframe.dataset.src;
     iframe.setAttribute("src", autoplay ? `${baseSrc}?autoplay=1` : baseSrc);
+
+    // Wait for iframe to finish loading
+    iframe.onload = () => {
+      document.querySelector(".yt_video_swiper .video-loader").style.display = "none"; // hide loader
+    };
   }
 }
+
 
 yt_video_swiper.on("slideChange", () => {
   stopAllVideos();
@@ -111,5 +118,6 @@ swiper_thumb_button.forEach((button, index) => {
 
 yt_video_swiper_closeBtn.addEventListener("click", () => {
   yt_video_swiper_cover.style.display = "none";
-  stopAllVideos(); // now actually unloads the player, not just pauses it
+  stopAllVideos();
+  document.querySelector(".video-loader").style.display = "none";
 });
