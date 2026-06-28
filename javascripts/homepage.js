@@ -39,11 +39,10 @@ const swiper_thumb = new Swiper(".swiper_thumb", {
 
 });
 const swiper_thumb_button = document.querySelectorAll(".swiper_thumb .swiper-slide button");
-
+const swiper_thumb_image = document.querySelector(".swiper_thumb .swiper-slide .slider_bgImage");
+const swiper_thumb_overlay = document.querySelectorAll(".swiper_thumb .swiper-slide .overlay");
 function button_position() {
-  const swiper_thumb_image = document.querySelector(".swiper_thumb .swiper-slide .slider_bgImage");
-  const swiper_thumb_overlay = document.querySelectorAll(".swiper_thumb .swiper-slide .overlay");
-  const imageHeight = swiper_thumb_image.getBoundingClientRect().height;
+  const imageHeight = swiper_thumb_image.clientHeight;
   swiper_thumb_button.forEach((button) => {
     button.style.top = `${(imageHeight) / 2}px`
   })
@@ -57,7 +56,14 @@ window.addEventListener("resize", () => {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(button_position, 5); // run after 100ms idle
 });
-// yt_video_swiper
+const observer = new ResizeObserver(() => {
+  button_position();
+});
+if(swiper_thumb_image){
+  observer.observe(swiper_thumb_image);
+}
+
+// --yt_video_swiper--
 const yt_video_swiper = new Swiper(".yt_video_swiper", {
   navigation: {
     prevEl: ".yt_video_swiper_prev",

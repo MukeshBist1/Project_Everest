@@ -596,6 +596,7 @@
 .swiper_thumb .swiper-slide .overlay{
     position: absolute;
     width: 100%;
+    overflow: hidden;
 }
 .swiper_thumb .swiper-slide .overlay .black_magic{
     width: 100%;
@@ -615,6 +616,7 @@
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
+    max-height: 240px;
 }
 
 
@@ -673,6 +675,7 @@
     position: absolute;
     top: 50%;
     z-index: 1;
+    cursor: pointer;
 }
 .yt_video_swiper_prev{
     left: 1%;
