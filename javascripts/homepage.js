@@ -18,6 +18,7 @@ const swiper = new Swiper('.feature_trips_swiper', {
 
 
 // ------------------------------------------video carousel here --------------------------------------
+
 // swiper-thumb
 const swiper_thumb = new Swiper(".swiper_thumb", {
   navigation: {
@@ -46,8 +47,8 @@ function button_position() {
   swiper_thumb_button.forEach((button) => {
     button.style.top = `${(imageHeight) / 2}px`
   })
-  swiper_thumb_overlay.forEach((overlay)=>{
-    overlay.style.height=`${imageHeight}px`
+  swiper_thumb_overlay.forEach((overlay) => {
+    overlay.style.height = `${imageHeight}px`
   })
 }
 button_position();
@@ -64,66 +65,45 @@ const yt_video_swiper = new Swiper(".yt_video_swiper", {
   },
   spaceBetween: 10,
   slidesPerView: 1,
-  thumbs:{
-    swiper:swiper_thumb,
+  thumbs: {
+    swiper: swiper_thumb,
   }
 });
 
-const yt_video_swiper_cover=document.querySelector(".yt_video_swiper_cover")
-const yt_video_swiper_closeBtn=document.querySelector(".yt_video_swiper_closeBtn")
+const yt_video_swiper_cover = document.querySelector(".yt_video_swiper_cover")
+const yt_video_swiper_closeBtn = document.querySelector(".yt_video_swiper_closeBtn")
 
-swiper_thumb_button.forEach((button)=>{
-  button.addEventListener("click",()=>{
-    yt_video_swiper_cover.style.display="block";
-  })
-})
-yt_video_swiper_closeBtn.addEventListener("click",()=>{
-  yt_video_swiper_cover.style.display="none";
-})
-
-
-//Copy Paste
 function stopAllVideos() {
   const iframes = document.querySelectorAll(".yt_video_swiper iframe");
   iframes.forEach((iframe) => {
-    let src = iframe.getAttribute("src");
-    // strip autoplay param if present
-    src = src.replace("&autoplay=1", "").replace("?autoplay=1", "");
-    iframe.setAttribute("src", src);
+    iframe.removeAttribute("src"); // fully unload, don't just edit the param
   });
+}
+
+function loadSlide(activeSlide, autoplay = true) {
+  const iframe = activeSlide.querySelector("iframe");
+  if (iframe) {
+    const baseSrc = iframe.dataset.src;
+    iframe.setAttribute("src", autoplay ? `${baseSrc}?autoplay=1` : baseSrc);
+  }
 }
 
 yt_video_swiper.on("slideChange", () => {
   stopAllVideos();
-
   const activeSlide = yt_video_swiper.slides[yt_video_swiper.activeIndex];
-  const iframe = activeSlide.querySelector("iframe");
-  if (iframe) {
-    let src = iframe.getAttribute("src");
-    if (!src.includes("autoplay=1")) {
-      src += src.includes("?") ? "&autoplay=1" : "?autoplay=1";
-      iframe.setAttribute("src", src);
-    }
-  }
+  loadSlide(activeSlide);
 });
 
-// when user clicks a thumbnail button → open video swiper and autoplay with sound
 swiper_thumb_button.forEach((button, index) => {
   button.addEventListener("click", () => {
     yt_video_swiper_cover.style.display = "block";
-    yt_video_swiper.slideTo(index); // sync to correct video
     stopAllVideos();
     const activeSlide = yt_video_swiper.slides[index];
-    const iframe = activeSlide.querySelector("iframe");
-    if (iframe) {
-      let src = iframe.getAttribute("src");
-      src += src.includes("?") ? "&autoplay=1" : "?autoplay=1";
-      iframe.setAttribute("src", src);
-    }
+    loadSlide(activeSlide);
   });
 });
 
 yt_video_swiper_closeBtn.addEventListener("click", () => {
   yt_video_swiper_cover.style.display = "none";
-  stopAllVideos();
+  stopAllVideos(); // now actually unloads the player, not just pauses it
 });
