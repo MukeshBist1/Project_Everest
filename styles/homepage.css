@@ -615,7 +615,6 @@ a{
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
-    max-height: 400px;
 }
 
 
@@ -821,6 +820,67 @@ a{
 
 
 
+/* frequently asked questions here */
+.faq_container{
+    width: 100%;
+    padding: 2rem 5px 2rem 5px;
+    margin-bottom: 2rem;
+}
+.faq_container h2{
+    font-size: 30px;
+    text-align: center;
+    margin: 2rem auto;
+}
+.faq_container .qn{
+    width: 80%;
+    margin-inline: auto;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px rgb(199, 199, 199);
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 5px;
+    padding-block: 1rem;
+}
+.faq_container .qn:hover{
+    box-shadow: 1px 1px 12px rgb(184, 184, 184);
+    background-color: rgb(250, 250, 250);
+}
+.faq_container .qn:hover button svg{
+    color: blue;
+}
+.faq_container .qn button{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: none;
+    border: none;
+}
+.faq_container .qn button h3{
+    color: var(--primary_color);
+    font-size: 16px;
+}
+.faq_container .qn button svg{
+    transition: transform 0.3s ease;
+    font-size: 13px;
+}
+.faq_container .qn  p{
+    padding:0 1rem 0 1rem;
+    color: rgb(27, 27, 27);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+.faq_container .qn  p a{
+    text-decoration: underline;
+}
+
+
+
+
+
 
 
 
@@ -848,6 +908,9 @@ a{
         }
 }
 @media screen and (max-width:1024px){
+    .faq_container .qn{
+    width: 85%;
+    }
     .feature_blog_bottom_right{
     width: auto;
 }
@@ -992,6 +1055,9 @@ a{
 }
 }
 @media screen and (max-width:768px){
+    .faq_container .qn{
+    width: 90%;
+    }
     
     .feature_blog{
     margin: 2rem auto 2rem;
@@ -1119,6 +1185,16 @@ a{
 }
 }
 @media screen and (max-width:640px){
+    .faq_container .qn button h3{
+    font-size: 18px;
+    text-align: left;
+}
+    .faq_container .qn  p{
+    font-size: 14px;
+}
+    .faq_container .qn{
+    width: 95%;
+    }
     .swiper_thumb_cover{
         width: 85%;
     }
@@ -1137,6 +1213,9 @@ a{
 }
 }
 @media screen and (max-width:480px){
+    .faq_container .qn{
+    width: 98%;
+    }
     .feature_blog_bottom_right .side_image{
     width: 106px;
 }

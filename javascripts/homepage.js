@@ -59,7 +59,7 @@ window.addEventListener("resize", () => {
 const observer = new ResizeObserver(() => {
   button_position();
 });
-if(swiper_thumb_image){
+if (swiper_thumb_image) {
   observer.observe(swiper_thumb_image);
 }
 
@@ -121,3 +121,25 @@ yt_video_swiper_closeBtn.addEventListener("click", () => {
   stopAllVideos();
   document.querySelector(".video-loader").style.display = "none";
 });
+
+
+
+//--------------------faq here----------------
+const faq_contents = document.querySelectorAll(".faq_container .qn  p");
+const faq_buttons = document.querySelectorAll(".faq_container .qn button");
+const faq_arrows=document.querySelectorAll(".faq_container .qn button svg")
+faq_buttons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    let content = faq_contents[index];
+    let contentHeight = content.scrollHeight;
+    let arrow = faq_arrows[index];
+    //content.style.height is for checking existence of inline height at initial
+    if (content.style.height && content.style.height !== "0px") { 
+      content.style.height = "0px";
+      arrow.style.transform="rotate(0deg)"
+    } else {
+      content.style.height = contentHeight + "px";
+      arrow.style.transform="rotate(180deg)"
+    }
+  })
+})
