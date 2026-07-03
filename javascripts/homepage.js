@@ -1,4 +1,5 @@
-const swiper = new Swiper('.feature_trips_swiper', {
+function initHomepage() {
+  const swiper = new Swiper('.feature_trips_swiper', {
   freeMode: false,
   slidesPerView: 1.2,
   centeredSlides: true,
@@ -143,3 +144,4 @@ faq_buttons.forEach((button, index) => {
     }
   })
 })
+}

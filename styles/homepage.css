@@ -48,6 +48,11 @@ a{
     border: none;
     outline: none;
     box-shadow: 1px 1px 4px rgb(252, 198, 21);
+    cursor: pointer;
+}
+.homepage_main .hero_video_container button:active {
+  outline: none;
+  box-shadow: none; /* removes the glow or colored box */
 }
 .homepage_main .hero_video_container button span{
     flex-grow: 1;
