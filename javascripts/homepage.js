@@ -1,7 +1,5 @@
 function initHomepage() {
   const featureTripsSwiper = new Swiper('.feature_trips_swiper', {
-    slidesPerView: 1.12,
-    spaceBetween: 18,
     centeredSlides: false,
     watchOverflow: true,
     grabCursor: true,
@@ -12,11 +10,15 @@ function initHomepage() {
     },
     breakpoints: {
       0: {
-        slidesPerView: 1.05,
+        slidesPerView: 1.2,
+        spaceBetween: 14,
+      },
+      480: {
+        slidesPerView: 1.5,
         spaceBetween: 14,
       },
       640: {
-        slidesPerView: 1.8,
+        slidesPerView: 2.1,
         spaceBetween: 18,
       },
       1024: {
