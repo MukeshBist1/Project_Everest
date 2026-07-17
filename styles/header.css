@@ -28,10 +28,10 @@ header #header_top .utility .utility_right{
     display: flex;gap: 0.5rem;
 }
 header #header_top .utility .utility_right .box .whatsapp_image{
-    width: 18px; scale: 1.5; margin-left: 0.5rem;transform: translateY(1px);
+    width: 15px; scale: 1.5; margin-left: 0.5rem;transform: translateY(1px);
 }
 header #header_top .utility .utility_right .person_image{
-    width: 52px;height: 52px; border-radius: 50%; box-shadow:0 0 3px rgb(126, 212, 115);border: 2px solid white;
+    width: 50px;height: 50px; border-radius: 50%; box-shadow:0 0 3px rgb(126, 212, 115);border: 2px solid white;
 }
 header #header_top .menubar{
     display: none;

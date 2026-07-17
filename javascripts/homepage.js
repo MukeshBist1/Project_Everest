@@ -1,21 +1,30 @@
 function initHomepage() {
-  const swiper = new Swiper('.feature_trips_swiper', {
-  freeMode: false,
-  slidesPerView: 1.2,
-  centeredSlides: true,
-  grabCursor: true,
-  spaceBetween: 10,
-  pagination: { el: '.swiper-pagination' },
-  navigation: {
-    nextEl: '.swiper_next_button',
-    prevEl: '.swiper_prev_button',
-  },
-  breakpoints: {
-    1024: { slidesPerView: 2, centeredSlides: false },
-    768: { slidesPerView: 2.5, centeredSlides: false },
-    480: { slidesPerView: 2, centeredSlides: false, paceBetween: 20, }
-  }
-});
+  const featureTripsSwiper = new Swiper('.feature_trips_swiper', {
+    slidesPerView: 1.12,
+    spaceBetween: 18,
+    centeredSlides: false,
+    watchOverflow: true,
+    grabCursor: true,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper_next_button',
+      prevEl: '.swiper_prev_button',
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1.05,
+        spaceBetween: 14,
+      },
+      640: {
+        slidesPerView: 1.8,
+        spaceBetween: 18,
+      },
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 24,
+      },
+    },
+  });
 
 
 // ------------------------------------------video carousel here --------------------------------------
