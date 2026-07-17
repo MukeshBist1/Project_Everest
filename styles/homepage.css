@@ -553,7 +553,8 @@ a{
 
 /* Video Carousel Here */
 .video_carousel_container{
-    margin: 4rem 0 4rem;
+    margin: 4rem auto 4rem;
+    max-width: 1300px;
 }
 .video_carousel_container .play_link_btn{
     color: #0289D1;
@@ -765,6 +766,7 @@ a{
     width: 85%;
     margin: 4rem auto 2rem;
     padding: 0.5rem;
+    max-width: 1200px;
 }
 .feature_blog_top{
     display: flex;
