@@ -182,7 +182,7 @@ a{
 .swiper_prev_button,
 .swiper_next_button {
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     z-index: 3;
     background-color: #374151;
@@ -202,6 +202,7 @@ a{
 }
 .swiper_prev_button{
     left: -0.5rem;
+    transform: rotate(-180deg);
 }
 .swiper_next_button{
     right: -0.5rem;
@@ -596,12 +597,12 @@ a{
 .swiper_thumb_prev,
 .swiper_thumb_next{
     font-size: 2rem;
-    height: 3rem;
-    width: 3rem;
+    height: 2.5rem;
+    width: 2.5rem;
     position: absolute;
     top: 35%;
     z-index: 1;
-    background-color: black;
+    background-color: rgb(59, 59, 59);
     border-radius: 50%;
     padding: 10px;
     border: 2px solid rgb(155, 155, 155);
