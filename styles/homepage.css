@@ -182,7 +182,7 @@ a{
 .swiper_prev_button,
 .swiper_next_button {
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     z-index: 3;
     background-color: #374151;
@@ -202,6 +202,7 @@ a{
 }
 .swiper_prev_button{
     left: -0.5rem;
+    transform: rotate(-180deg);
 }
 .swiper_next_button{
     right: -0.5rem;
